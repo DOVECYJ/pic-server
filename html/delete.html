@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>删除图片</title>
+	</head>
+	
+	<body>
+		{{range $key, $val := .images}}
+		<table>
+			<tr><th><img src="{{$val}}" alt="{{$key}}" width="400" height="266" /></th></tr>
+			<tr><th>
+				<form action="/del" method="post">
+				<input type="hidden" name="path" value="{{$key}}">
+				<input type="submit" value="删除" style="width:50%;">
+				</form> 
+			</th></tr>
+		</table>
+		{{end}}
+	</body>
+<html>
