@@ -26,5 +26,5 @@ func main() {
 
 2. 编译后运行：
 ```go builg client.exe```
-然后在powershell中输入`./client.exe-file F://a.jpg E://b.png`
+然后在powershell中输入`./client.exe -url "localhost:8888" -file F://a.jpg E://b.png`
 
