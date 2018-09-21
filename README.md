@@ -24,7 +24,7 @@ func main() {
 1. 直接用`go run`命令运行：
 ```go run client.go -url "localhost:8888" -file F://a.jpg E://b.png```
 
-2.编译后运行：
+2. 编译后运行：
 ```go builg client.exe```
 然后在powershell中输入`./client.exe-file F://a.jpg E://b.png`
 
