@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>上传结果</title>
+	</head>
+	
+	<body>
+		<br>
+		{{if eq .code 0}}
+		<h2>全部成功</h2>
+		<br>
+		<hr>
+		<div><h4>图片URL：</h4></div>
+		{{range .urls}}
+		<div><h5>{{.}}</h5></div>
+		{{end}}
+		{{end}}
+		{{if eq .code 1}}
+		<h2>部分成功</h2>
+		<br>
+		<hr>
+		<div><h4>图片URL：</h4></div>
+		{{range .urls}}
+		<div><h5>{{.}}</h5></div>
+		{{end}}
+		<br>
+		<hr>
+		<div><h4>上传失败：</h4></div>
+		{{range .failed}}
+		<div><h5>{{.}}</h5></div>
+		{{end}}
+		<br>
+		<hr>
+		<div><h4>错误：</h4></div>
+		{{range .errs}}
+		<div><h5>{{.}}</h5></div>
+		{{end}}
+		{{end}}
+		{{if eq .code 2}}
+		<h2>全部失败</h2>
+		<br>
+		<hr>
+		<div><h4>上传失败：</h4></div>
+		{{range .failed}}
+		<div><h5>{{.}}</h5></div>
+		{{end}}
+		<br>
+		<hr>
+		<div><h4>错误：</h4></div>
+		{{range .errs}}
+		<div><h5>{{.}}</h5></div>
+		{{end}}
+		{{end}}
+		<br>
+		<hr>
+	</body>
+</html>
